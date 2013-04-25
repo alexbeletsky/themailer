@@ -2,7 +2,7 @@
 {
     public class Task
     {
-        public string Desciption
+        public string Description
         {
             get;
             set;
@@ -14,7 +14,7 @@
             set;
         }
 
-        public bool Done
+        public string Done
         {
             get;
             set;

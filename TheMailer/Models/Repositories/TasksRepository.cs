@@ -12,19 +12,21 @@ namespace TheMailer.Models.Repositories
                              {
                                  new Task
                                      {
-                                         Desciption = "Prepare presentation for MSSWIIT",
+                                         Description = "Prepare presentation for MSSWIIT",
                                          DueDate = "04/25/2013",
-                                         Done = false
+                                         Done = "Yes"
                                      },
                                  new Task
                                      {
-                                         Desciption = "Write 'TheMailer' app to demo SPA concepts",
+                                         Description = "Write 'TheMailer' app to demo SPA concepts",
                                          DueDate = "04/25/2013",
+                                         Done = "Yes"
                                      },
                                  new Task
                                      {
-                                         Desciption = "Drink some beer after conference",
-                                         DueDate = "04/25/2013"
+                                         Description = "Drink some beer after conference",
+                                         DueDate = "04/25/2013",
+                                         Done = "No"
                                      }
                              };
         }

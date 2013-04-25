@@ -11,7 +11,8 @@ define(function(require) {
 			'': 'home',
 			'inbox': 'inbox',
 			'inbox/compose': 'inboxCompose',
-			'contacts': 'contacts'
+			'contacts': 'contacts',
+			'tasks': 'tasks'
 		},
 
 		home: function () {
@@ -28,6 +29,10 @@ define(function(require) {
 
 		contacts: function () {
 			require('./../apps/contacts/app').run(this.viewManager);
+		},
+
+		tasks: function () {
+			require('./../apps/tasks/app').run(this.viewManager);
 		}
 	});
 
