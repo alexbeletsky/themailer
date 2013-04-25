@@ -10,7 +10,8 @@ define(function(require) {
 		routes: {
 			'': 'home',
 			'inbox': 'inbox',
-			'inbox/compose': 'inboxCompose'
+			'inbox/compose': 'inboxCompose',
+			'contacts': 'contacts'
 		},
 
 		home: function () {
@@ -23,6 +24,10 @@ define(function(require) {
 
 		inboxCompose: function () {
 			require('./../apps/inbox/subapps/compose/app').run(this.viewManager);
+		},
+
+		contacts: function () {
+			require('./../apps/contacts/app').run(this.viewManager);
 		}
 	});
 

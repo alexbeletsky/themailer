@@ -27,7 +27,7 @@ define(function (require) {
 			var alerts = this.$('.alerts');
 			this.model.save(attributes, {
 				success: function () {
-					alerts.append('<div class="alert alert-success"><b>Success!</b>Message sent. You will be redirected to inbox now...</div>');
+					alerts.append('<div class="alert alert-success"><b>Success!</b> Message sent. You will be redirected to inbox now...</div>');
 					setTimeout(function () {
 						Router.navigate('/inbox', {trigger: true});
 					}, 1500);
