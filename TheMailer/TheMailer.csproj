@@ -1,0 +1,1254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B351314E-5B75-4537-A541-BE6343B45AE2}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheMailer</RootNamespace>
+    <AssemblyName>TheMailer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\ContactsController.cs" />
+    <Compile Include="Api\InboxController.cs" />
+    <Compile Include="Api\TasksController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Repositories\ContactsRepository.cs" />
+    <Compile Include="Models\Repositories\EmailsRepository.cs" />
+    <Compile Include="Models\Repositories\TasksRepository.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Public\components\backbone\.gitignore" />
+    <Content Include="Public\components\backbone\backbone-min.js" />
+    <Content Include="Public\components\backbone\backbone.js" />
+    <Content Include="Public\components\backbone\docs\backbone-localstorage.html" />
+    <Content Include="Public\components\backbone\docs\backbone.html" />
+    <Content Include="Public\components\backbone\docs\backbone.localstorage.html" />
+    <Content Include="Public\components\backbone\docs\docco.css" />
+    <Content Include="Public\components\backbone\docs\images\airbnb.png" />
+    <Content Include="Public\components\backbone\docs\images\arrows.png" />
+    <Content Include="Public\components\backbone\docs\images\artsy.png" />
+    <Content Include="Public\components\backbone\docs\images\backbone-mobile.png" />
+    <Content Include="Public\components\backbone\docs\images\backbone.png" />
+    <Content Include="Public\components\backbone\docs\images\background.png" />
+    <Content Include="Public\components\backbone\docs\images\baroque.jpg" />
+    <Content Include="Public\components\backbone\docs\images\basecamp-calendar.jpg" />
+    <Content Include="Public\components\backbone\docs\images\battlefield.png" />
+    <Content Include="Public\components\backbone\docs\images\bitbucket.png" />
+    <Content Include="Public\components\backbone\docs\images\blossom.png" />
+    <Content Include="Public\components\backbone\docs\images\cloudapp.png" />
+    <Content Include="Public\components\backbone\docs\images\code-school.png" />
+    <Content Include="Public\components\backbone\docs\images\dc-workspace.png" />
+    <Content Include="Public\components\backbone\docs\images\diaspora.png" />
+    <Content Include="Public\components\backbone\docs\images\disqus.png" />
+    <Content Include="Public\components\backbone\docs\images\do.png" />
+    <Content Include="Public\components\backbone\docs\images\easel.png" />
+    <Content Include="Public\components\backbone\docs\images\favicon.ico" />
+    <Content Include="Public\components\backbone\docs\images\flow.png" />
+    <Content Include="Public\components\backbone\docs\images\foursquare.png" />
+    <Content Include="Public\components\backbone\docs\images\gilt.jpg" />
+    <Content Include="Public\components\backbone\docs\images\groupon.png" />
+    <Content Include="Public\components\backbone\docs\images\hulu.png" />
+    <Content Include="Public\components\backbone\docs\images\inkling.png" />
+    <Content Include="Public\components\backbone\docs\images\irccloud.png" />
+    <Content Include="Public\components\backbone\docs\images\jolicloud.jpg" />
+    <Content Include="Public\components\backbone\docs\images\khan-academy.png" />
+    <Content Include="Public\components\backbone\docs\images\linkedin-mobile.png" />
+    <Content Include="Public\components\backbone\docs\images\menagerievet.png" />
+    <Content Include="Public\components\backbone\docs\images\newsblur.jpg" />
+    <Content Include="Public\components\backbone\docs\images\pandora.png" />
+    <Content Include="Public\components\backbone\docs\images\pitchfork.png" />
+    <Content Include="Public\components\backbone\docs\images\prose.png" />
+    <Content Include="Public\components\backbone\docs\images\quartz.jpg" />
+    <Content Include="Public\components\backbone\docs\images\rdio.png" />
+    <Content Include="Public\components\backbone\docs\images\salon.png" />
+    <Content Include="Public\components\backbone\docs\images\seatgeek.png" />
+    <Content Include="Public\components\backbone\docs\images\slavery-footprint.png" />
+    <Content Include="Public\components\backbone\docs\images\soundcloud.png" />
+    <Content Include="Public\components\backbone\docs\images\spin.png" />
+    <Content Include="Public\components\backbone\docs\images\stripe.png" />
+    <Content Include="Public\components\backbone\docs\images\syllabus.jpg" />
+    <Content Include="Public\components\backbone\docs\images\tilemill.png" />
+    <Content Include="Public\components\backbone\docs\images\todos.png" />
+    <Content Include="Public\components\backbone\docs\images\trello.png" />
+    <Content Include="Public\components\backbone\docs\images\tzigla.png" />
+    <Content Include="Public\components\backbone\docs\images\usa-today.png" />
+    <Content Include="Public\components\backbone\docs\images\walmart-mobile.png" />
+    <Content Include="Public\components\backbone\docs\images\wpcom-notifications.png" />
+    <Content Include="Public\components\backbone\docs\js\jquery.lazyload.js" />
+    <Content Include="Public\components\backbone\docs\public\images\grey_%402X.png" />
+    <Content Include="Public\components\backbone\docs\public\stylesheets\normalize.css" />
+    <Content Include="Public\components\backbone\docs\todos.html" />
+    <Content Include="Public\components\backbone\examples\backbone.localStorage.js" />
+    <Content Include="Public\components\backbone\examples\todos\destroy.png" />
+    <Content Include="Public\components\backbone\examples\todos\index.html" />
+    <Content Include="Public\components\backbone\examples\todos\todos.css" />
+    <Content Include="Public\components\backbone\examples\todos\todos.js" />
+    <Content Include="Public\components\backbone\index.html" />
+    <Content Include="Public\components\backbone\index.js" />
+    <Content Include="Public\components\backbone\test\collection.js" />
+    <Content Include="Public\components\backbone\test\environment.js" />
+    <Content Include="Public\components\backbone\test\events.js" />
+    <Content Include="Public\components\backbone\test\index.html" />
+    <Content Include="Public\components\backbone\test\model.js" />
+    <Content Include="Public\components\backbone\test\noconflict.js" />
+    <Content Include="Public\components\backbone\test\router.js" />
+    <Content Include="Public\components\backbone\test\sync.js" />
+    <Content Include="Public\components\backbone\test\vendor\jquery.js" />
+    <Content Include="Public\components\backbone\test\vendor\json2.js" />
+    <Content Include="Public\components\backbone\test\vendor\qunit.css" />
+    <Content Include="Public\components\backbone\test\vendor\qunit.js" />
+    <Content Include="Public\components\backbone\test\vendor\runner.js" />
+    <Content Include="Public\components\backbone\test\vendor\underscore.js" />
+    <Content Include="Public\components\backbone\test\view.js" />
+    <Content Include="Public\components\bootstrap\.gitignore" />
+    <Content Include="Public\components\bootstrap\docs\assets\css\bootstrap-responsive.css" />
+    <Content Include="Public\components\bootstrap\docs\assets\css\bootstrap.css" />
+    <Content Include="Public\components\bootstrap\docs\assets\css\docs.css" />
+    <Content Include="Public\components\bootstrap\docs\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\ico\favicon.ico" />
+    <Content Include="Public\components\bootstrap\docs\assets\ico\favicon.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bootstrap-docs-readme.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bootstrap-mdo-sfmoma-01.jpg" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bootstrap-mdo-sfmoma-02.jpg" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bootstrap-mdo-sfmoma-03.jpg" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bs-docs-bootstrap-features.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bs-docs-masthead-pattern.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bs-docs-responsive-illustrations.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\bs-docs-twitter-github.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\8020select.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\adoptahydrant.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\breakingnews.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\fleetio.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\gathercontent.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\jshint.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\kippt.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\example-sites\soundready.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-carousel.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-fluid.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-justified-nav.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-marketing-narrow.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-marketing.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-signin.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-starter.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\bootstrap-example-sticky-footer.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\browser-icon-chrome.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\browser-icon-firefox.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\browser-icon-safari.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\slide-01.jpg" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\slide-02.jpg" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\examples\slide-03.jpg" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\glyphicons-halflings.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\grid-baseline-20px.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\less-logo-large.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\img\responsive-illustrations.png" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\application.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-affix.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-alert.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-button.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-carousel.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-collapse.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-dropdown.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-modal.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-popover.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-scrollspy.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-tab.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-tooltip.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-transition.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap-typeahead.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\bootstrap.min.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\holder\holder.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\html5shiv.js" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\jquery.js" />
+    <Content Include="Public\components\bootstrap\docs\base-css.html" />
+    <Content Include="Public\components\bootstrap\docs\build\index.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\.gitmodules" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\lib\compiler.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\lib\hogan.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\lib\template.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\html\list.html" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\index.html" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\index.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\mustache.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\tools\release.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\tools\web_templates.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\1.0.0\hogan.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\1.0.0\hogan.min.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.0\hogan.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.0\hogan.min.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.3\hogan.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.3\hogan.min.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.amd.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.common.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.amd.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.common.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.mustache.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.mustache.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\template-1.0.5.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\builds\1.0.5\template-1.0.5.min.js" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\favicon.ico" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\images\logo.png" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\images\noise.png" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\images\small-hogan-icon.png" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\images\stripes.png" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\stylesheets\layout.css" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\stylesheets\skeleton.css" />
+    <Content Include="Public\components\bootstrap\docs\components.html" />
+    <Content Include="Public\components\bootstrap\docs\customize.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\carousel.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\fluid.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\hero.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\justified-nav.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\marketing-narrow.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\signin.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\starter-template.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\sticky-footer-navbar.html" />
+    <Content Include="Public\components\bootstrap\docs\examples\sticky-footer.html" />
+    <Content Include="Public\components\bootstrap\docs\extend.html" />
+    <Content Include="Public\components\bootstrap\docs\getting-started.html" />
+    <Content Include="Public\components\bootstrap\docs\index.html" />
+    <Content Include="Public\components\bootstrap\docs\javascript.html" />
+    <Content Include="Public\components\bootstrap\docs\scaffolding.html" />
+    <Content Include="Public\components\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Public\components\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-affix.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-alert.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-button.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-carousel.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-collapse.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-dropdown.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-modal.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-popover.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-scrollspy.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-tab.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-tooltip.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-transition.js" />
+    <Content Include="Public\components\bootstrap\js\bootstrap-typeahead.js" />
+    <Content Include="Public\components\bootstrap\js\tests\index.html" />
+    <Content Include="Public\components\bootstrap\js\tests\phantom.js" />
+    <Content Include="Public\components\bootstrap\js\tests\server.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-affix.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-alert.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-button.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-carousel.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-collapse.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-dropdown.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-modal.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-phantom.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-popover.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-scrollspy.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-tab.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-tooltip.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-transition.js" />
+    <Content Include="Public\components\bootstrap\js\tests\unit\bootstrap-typeahead.js" />
+    <Content Include="Public\components\bootstrap\js\tests\vendor\jquery.js" />
+    <Content Include="Public\components\bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="Public\components\bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="Public\components\bootstrap\less\tests\buttons.html" />
+    <Content Include="Public\components\bootstrap\less\tests\css-tests.css" />
+    <Content Include="Public\components\bootstrap\less\tests\css-tests.html" />
+    <Content Include="Public\components\bootstrap\less\tests\forms-responsive.html" />
+    <Content Include="Public\components\bootstrap\less\tests\forms.html" />
+    <Content Include="Public\components\bootstrap\less\tests\navbar-fixed-top.html" />
+    <Content Include="Public\components\bootstrap\less\tests\navbar-static-top.html" />
+    <Content Include="Public\components\bootstrap\less\tests\navbar.html" />
+    <Content Include="Public\components\jquery\.gitignore" />
+    <Content Include="Public\components\jquery\jquery-migrate.js" />
+    <Content Include="Public\components\jquery\jquery-migrate.min.js" />
+    <Content Include="Public\components\jquery\jquery.js" />
+    <Content Include="Public\components\jquery\jquery.min.js" />
+    <Content Include="Public\components\require-handlebars-plugin\.gitignore" />
+    <Content Include="Public\components\require-handlebars-plugin\demo-build.html" />
+    <Content Include="Public\components\require-handlebars-plugin\demo.html" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\app.build.js" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\main.js" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\require.js" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\styles\one.css" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\styles\two.css" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\template\helpers\all.js" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\template\helpers\yeller.js" />
+    <Content Include="Public\components\require-handlebars-plugin\Handlebars.js" />
+    <Content Include="Public\components\require-handlebars-plugin\hbs.js" />
+    <Content Include="Public\components\require-handlebars-plugin\hbs\i18nprecompile.js" />
+    <Content Include="Public\components\require-handlebars-plugin\hbs\json2.js" />
+    <Content Include="Public\components\require-handlebars-plugin\hbs\underscore.js" />
+    <Content Include="Public\components\require-handlebars-plugin\r.js" />
+    <Content Include="Public\components\requirejs\.gitignore" />
+    <Content Include="Public\components\requirejs\dist\dist-site.js" />
+    <Content Include="Public\components\requirejs\dist\file.js" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\Paratype PT Sans Free Font License.txt" />
+    <Content Include="Public\components\requirejs\dist\init.js" />
+    <Content Include="Public\components\requirejs\dist\post.html" />
+    <Content Include="Public\components\requirejs\dist\pre.html" />
+    <Content Include="Public\components\requirejs\docs\api.html" />
+    <Content Include="Public\components\requirejs\docs\commonjs.html" />
+    <Content Include="Public\components\requirejs\docs\contributing.html" />
+    <Content Include="Public\components\requirejs\docs\dojo.html" />
+    <Content Include="Public\components\requirejs\docs\download.html" />
+    <Content Include="Public\components\requirejs\docs\errors.html" />
+    <Content Include="Public\components\requirejs\docs\faq-advanced.html" />
+    <Content Include="Public\components\requirejs\docs\faq-optimization.html" />
+    <Content Include="Public\components\requirejs\docs\faq.html" />
+    <Content Include="Public\components\requirejs\docs\history.html" />
+    <Content Include="Public\components\requirejs\docs\jquery.html" />
+    <Content Include="Public\components\requirejs\docs\node.html" />
+    <Content Include="Public\components\requirejs\docs\optimization.html" />
+    <Content Include="Public\components\requirejs\docs\plugins.html" />
+    <Content Include="Public\components\requirejs\docs\requirements.html" />
+    <Content Include="Public\components\requirejs\docs\start.html" />
+    <Content Include="Public\components\requirejs\docs\why.html" />
+    <Content Include="Public\components\requirejs\docs\whyamd.html" />
+    <Content Include="Public\components\requirejs\index.html" />
+    <Content Include="Public\components\requirejs\require.js" />
+    <Content Include="Public\components\requirejs\tasks.txt" />
+    <Content Include="Public\components\requirejs\testBaseUrl.js" />
+    <Content Include="Public\components\requirejs\tests\afterload.html" />
+    <Content Include="Public\components\requirejs\tests\afterloadreadystate.js" />
+    <Content Include="Public\components\requirejs\tests\all-server.js" />
+    <Content Include="Public\components\requirejs\tests\all.js" />
+    <Content Include="Public\components\requirejs\tests\anon\a.js" />
+    <Content Include="Public\components\requirejs\tests\anon\anon-tests.js" />
+    <Content Include="Public\components\requirejs\tests\anon\anonSimple.html" />
+    <Content Include="Public\components\requirejs\tests\anon\blue.js" />
+    <Content Include="Public\components\requirejs\tests\anon\c.js" />
+    <Content Include="Public\components\requirejs\tests\anon\green.js" />
+    <Content Include="Public\components\requirejs\tests\anon\magenta.js" />
+    <Content Include="Public\components\requirejs\tests\anon\message.txt" />
+    <Content Include="Public\components\requirejs\tests\anon\red.js" />
+    <Content Include="Public\components\requirejs\tests\anon\sub\b.js" />
+    <Content Include="Public\components\requirejs\tests\anon\yellow.js" />
+    <Content Include="Public\components\requirejs\tests\baseUrl.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\appendbeforeload\test.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\appendbeforeload\two.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\async\two.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\common.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\docwritenested\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\docwritenested\one.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\docwritenested\two.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\functionToString.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\noload\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\noload\server.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\onerror\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\onerror\ok.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\onerror\parseError.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\onerror\scriptError.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\eight.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\five.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\four.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\index-php.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\nine.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\one.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\seven.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\six.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\three.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\two.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\eight.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\five.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\four.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\index-php.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\nine.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\one.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\seven.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\six.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\three.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\two.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\eight.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\five.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\four.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\nine.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\one.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\seven.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\six.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\three.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptload\two.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\vardefine\define.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\vardefine\four.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\vardefine\index.html" />
+    <Content Include="Public\components\requirejs\tests\browsertests\vardefine\one.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\vardefine\three.js" />
+    <Content Include="Public\components\requirejs\tests\browsertests\vardefine\two.js" />
+    <Content Include="Public\components\requirejs\tests\circular-tests.js" />
+    <Content Include="Public\components\requirejs\tests\circular.html" />
+    <Content Include="Public\components\requirejs\tests\circular\414\414-tests.js" />
+    <Content Include="Public\components\requirejs\tests\circular\414\414.html" />
+    <Content Include="Public\components\requirejs\tests\circular\414\A.js" />
+    <Content Include="Public\components\requirejs\tests\circular\414\B.js" />
+    <Content Include="Public\components\requirejs\tests\circular\414\C.js" />
+    <Content Include="Public\components\requirejs\tests\circular\414\MyClass.js" />
+    <Content Include="Public\components\requirejs\tests\circular\a.js" />
+    <Content Include="Public\components\requirejs\tests\circular\b.js" />
+    <Content Include="Public\components\requirejs\tests\circular\c.js" />
+    <Content Include="Public\components\requirejs\tests\circular\circularPlugin-tests.js" />
+    <Content Include="Public\components\requirejs\tests\circular\circularPlugin.html" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\complexPlugin-tests.js" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\complexPlugin.html" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\helper.js" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\main.js" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\slowText.js" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\toolbar.html" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\toolbar.js" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\viewport.html" />
+    <Content Include="Public\components\requirejs\tests\circular\complexPlugin\viewport.js" />
+    <Content Include="Public\components\requirejs\tests\circular\plugin.js" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\transpiler-tests.js" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\transpiler.html" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\a.js" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\b.js" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\c.js" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\cjsDotRequire-tests.js" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\cjsDotRequire.html" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\cjsSpace-tests.js" />
+    <Content Include="Public\components\requirejs\tests\cjsSpace\cjsSpace.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\absolute\b.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\absolute\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\absolute\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\absolute\submodule\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\absolute\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\all.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\cyclic\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\cyclic\b.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\cyclic\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\cyclic\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\cyclic\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\determinism\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\determinism\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\determinism\submodule\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\determinism\submodule\b.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\determinism\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\exactExports\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\exactExports\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\exactExports\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\exactExports\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\hasOwnProperty.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\toString.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\method\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\method\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\method\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\method\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\missing\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\missing\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\missing\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\monkeys\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\monkeys\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\monkeys\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\monkeys\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\nested\a\b\c\d.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\nested\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\nested\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\nested\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\relative\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\relative\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\relative\submodule\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\relative\submodule\b.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\relative\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\system.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\test.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\transitive\a.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\transitive\b.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\transitive\c.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\transitive\program.html" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\transitive\program.js" />
+    <Content Include="Public\components\requirejs\tests\commonjs\tests\modules\1.0\transitive\test.js" />
+    <Content Include="Public\components\requirejs\tests\config.html" />
+    <Content Include="Public\components\requirejs\tests\configRequirejs.html" />
+    <Content Include="Public\components\requirejs\tests\dataMain\baseUrl\a.js" />
+    <Content Include="Public\components\requirejs\tests\dataMain\baseUrl\dataMainBaseUrl.html" />
+    <Content Include="Public\components\requirejs\tests\dataMain\baseUrl\src\main.js" />
+    <Content Include="Public\components\requirejs\tests\dataMain\dataMain.html" />
+    <Content Include="Public\components\requirejs\tests\dataMain\dataMain.js" />
+    <Content Include="Public\components\requirejs\tests\dataMain\dataMainIndex\dataMainIndex.html" />
+    <Content Include="Public\components\requirejs\tests\dataMain\dataMainIndex\index.js" />
+    <Content Include="Public\components\requirejs\tests\defineDouble\defineDouble.html" />
+    <Content Include="Public\components\requirejs\tests\definedSpecified\a.js" />
+    <Content Include="Public\components\requirejs\tests\definedSpecified\b.js" />
+    <Content Include="Public\components\requirejs\tests\definedSpecified\definedSpecified-tests.js" />
+    <Content Include="Public\components\requirejs\tests\definedSpecified\definedSpecified.html" />
+    <Content Include="Public\components\requirejs\tests\delayedDefine\delayedDefine-tests.js" />
+    <Content Include="Public\components\requirejs\tests\delayedDefine\delayedDefine.html" />
+    <Content Include="Public\components\requirejs\tests\depoverlap.html" />
+    <Content Include="Public\components\requirejs\tests\depoverlap.js" />
+    <Content Include="Public\components\requirejs\tests\dimple.js" />
+    <Content Include="Public\components\requirejs\tests\doh\runner.html" />
+    <Content Include="Public\components\requirejs\tests\doh\runner.js" />
+    <Content Include="Public\components\requirejs\tests\doh\small_logo.png" />
+    <Content Include="Public\components\requirejs\tests\doh\_browserRunner.js" />
+    <Content Include="Public\components\requirejs\tests\doh\_nodeRunner.js" />
+    <Content Include="Public\components\requirejs\tests\doh\_rhinoRunner.js" />
+    <Content Include="Public\components\requirejs\tests\doh\_sounds\doh.wav" />
+    <Content Include="Public\components\requirejs\tests\doh\_sounds\dohaaa.wav" />
+    <Content Include="Public\components\requirejs\tests\doh\_sounds\woohoo.wav" />
+    <Content Include="Public\components\requirejs\tests\domReady\domReady-tests.js" />
+    <Content Include="Public\components\requirejs\tests\domReady\domReady.html" />
+    <Content Include="Public\components\requirejs\tests\domReady\domReadyExtraConfig-tests.js" />
+    <Content Include="Public\components\requirejs\tests\domReady\domReadyExtraConfig.html" />
+    <Content Include="Public\components\requirejs\tests\domReady\one.js" />
+    <Content Include="Public\components\requirejs\tests\domReady\two.js" />
+    <Content Include="Public\components\requirejs\tests\dos.js" />
+    <Content Include="Public\components\requirejs\tests\error\a.js" />
+    <Content Include="Public\components\requirejs\tests\error\b.js" />
+    <Content Include="Public\components\requirejs\tests\error\c.js" />
+    <Content Include="Public\components\requirejs\tests\error\d.js" />
+    <Content Include="Public\components\requirejs\tests\error\defineError.js" />
+    <Content Include="Public\components\requirejs\tests\error\defineErrorLocal.html" />
+    <Content Include="Public\components\requirejs\tests\error\errorContinue.html" />
+    <Content Include="Public\components\requirejs\tests\error\errorContinueLocal.html" />
+    <Content Include="Public\components\requirejs\tests\error\plug.js" />
+    <Content Include="Public\components\requirejs\tests\error\pluginErrorContinue.html" />
+    <Content Include="Public\components\requirejs\tests\error\pluginErrorContinueLocal.html" />
+    <Content Include="Public\components\requirejs\tests\exports\am.js" />
+    <Content Include="Public\components\requirejs\tests\exports\assign.js" />
+    <Content Include="Public\components\requirejs\tests\exports\assign2.js" />
+    <Content Include="Public\components\requirejs\tests\exports\bm.js" />
+    <Content Include="Public\components\requirejs\tests\exports\cm.js" />
+    <Content Include="Public\components\requirejs\tests\exports\exports-tests.js" />
+    <Content Include="Public\components\requirejs\tests\exports\exports.html" />
+    <Content Include="Public\components\requirejs\tests\exports\funcSet.js" />
+    <Content Include="Public\components\requirejs\tests\exports\implicitModule.js" />
+    <Content Include="Public\components\requirejs\tests\exports\moduleAndExports-tests.js" />
+    <Content Include="Public\components\requirejs\tests\exports\moduleAndExports.html" />
+    <Content Include="Public\components\requirejs\tests\exports\simpleReturn.js" />
+    <Content Include="Public\components\requirejs\tests\exports\usethis.js" />
+    <Content Include="Public\components\requirejs\tests\exports\vanilla.js" />
+    <Content Include="Public\components\requirejs\tests\func.js" />
+    <Content Include="Public\components\requirejs\tests\funcFour.js" />
+    <Content Include="Public\components\requirejs\tests\funcOne.js" />
+    <Content Include="Public\components\requirejs\tests\funcThree.js" />
+    <Content Include="Public\components\requirejs\tests\funcTwo.js" />
+    <Content Include="Public\components\requirejs\tests\hasOwnProperty\hasOwnProperty-tests.js" />
+    <Content Include="Public\components\requirejs\tests\hasOwnProperty\hasOwnProperty.html" />
+    <Content Include="Public\components\requirejs\tests\hasOwnProperty\hasOwnProperty.js" />
+    <Content Include="Public\components\requirejs\tests\hasOwnProperty\prototype.js" />
+    <Content Include="Public\components\requirejs\tests\hasOwnProperty\toString.js" />
+    <Content Include="Public\components\requirejs\tests\i18n\common.html" />
+    <Content Include="Public\components\requirejs\tests\i18n\commonA.js" />
+    <Content Include="Public\components\requirejs\tests\i18n\commonB.js" />
+    <Content Include="Public\components\requirejs\tests\i18n\i18n.html" />
+    <Content Include="Public\components\requirejs\tests\i18n\nls\colors.js" />
+    <Content Include="Public\components\requirejs\tests\i18n\nls\en-us-surfer\colors.js" />
+    <Content Include="Public\components\requirejs\tests\i18n\nls\fr\colors.js" />
+    <Content Include="Public\components\requirejs\tests\i18n\testModule.js" />
+    <Content Include="Public\components\requirejs\tests\index.html" />
+    <Content Include="Public\components\requirejs\tests\isBrowser\a.js" />
+    <Content Include="Public\components\requirejs\tests\isBrowser\isBrowser-tests.js" />
+    <Content Include="Public\components\requirejs\tests\isBrowser\isBrowser.html" />
+    <Content Include="Public\components\requirejs\tests\issue379\issue379.html" />
+    <Content Include="Public\components\requirejs\tests\issue379\issue379.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\jquery.html" />
+    <Content Include="Public\components\requirejs\tests\jquery\jqueryDynamic.html" />
+    <Content Include="Public\components\requirejs\tests\jquery\jqueryDynamic2.html" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\app.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\dynamicApp.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery-1.7.1.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery-GPL-LICENSE.txt" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery-MIT-LICENSE.txt" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery.alpha.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery.beta.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery.epsilon.js" />
+    <Content Include="Public\components\requirejs\tests\jquery\scripts\jquery.gamma.js" />
+    <Content Include="Public\components\requirejs\tests\jsonp\jsonp.html" />
+    <Content Include="Public\components\requirejs\tests\jsonp\lamp.js" />
+    <Content Include="Public\components\requirejs\tests\jsonp\twitter.html" />
+    <Content Include="Public\components\requirejs\tests\layers\epsilon.js" />
+    <Content Include="Public\components\requirejs\tests\layers\helloWorld.txt" />
+    <Content Include="Public\components\requirejs\tests\layers\layer1.js" />
+    <Content Include="Public\components\requirejs\tests\layers\layers.html" />
+    <Content Include="Public\components\requirejs\tests\map.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\a1.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\a1\sub\one.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\adapter\d.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\another\c.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\another\c\dim.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\another\c\sub.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\another\minor.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\b.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfig-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigBuilt.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigPlugin-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigPluginBuilt.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigStar-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigStarAdapter-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigStarAdapterBuilt.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\built\mapConfigStarBuilt.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\c.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\c1.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\c1\sub.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\c2.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\c2\sub.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\c\sub.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\d.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\e.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfig-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfig.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigDelayed-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigDelayed.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigMulti-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigMulti.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigPlugin-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigPlugin.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigRelative-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigRelative.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigSpecificity-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigSpecificity.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigStar-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigStar.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigStarAdapter-tests.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\mapConfigStarAdapter.html" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\plug.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\plug\c1.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\plug\c2.js" />
+    <Content Include="Public\components\requirejs\tests\mapConfig\plug\main.js" />
+    <Content Include="Public\components\requirejs\tests\moduleConfig\a.js" />
+    <Content Include="Public\components\requirejs\tests\moduleConfig\b\c.js" />
+    <Content Include="Public\components\requirejs\tests\moduleConfig\moduleConfig-tests.js" />
+    <Content Include="Public\components\requirejs\tests\moduleConfig\moduleConfig.html" />
+    <Content Include="Public\components\requirejs\tests\moduleConfig\plain.js" />
+    <Content Include="Public\components\requirejs\tests\multiversion.html" />
+    <Content Include="Public\components\requirejs\tests\NAMESPACE.html" />
+    <Content Include="Public\components\requirejs\tests\nestedDefine\four.js" />
+    <Content Include="Public\components\requirejs\tests\nestedDefine\nestedDefine.html" />
+    <Content Include="Public\components\requirejs\tests\nestedDefine\nestedDefine2.html" />
+    <Content Include="Public\components\requirejs\tests\nestedDefine\nestedDefine2.js" />
+    <Content Include="Public\components\requirejs\tests\nestedDefine\one.js" />
+    <Content Include="Public\components\requirejs\tests\nestedDefine\two.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRelativeRequire\main.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRelativeRequire\nestedRelativeRequire.html" />
+    <Content Include="Public\components\requirejs\tests\nestedRelativeRequire\sub\a.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRelativeRequire\sub\b.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRequireConfig\nestedRequireConfig.html" />
+    <Content Include="Public\components\requirejs\tests\nestedRequireConfig\nestedRequireConfig.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRequire\a.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRequire\base.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRequire\nestedRequire-tests.js" />
+    <Content Include="Public\components\requirejs\tests\nestedRequire\nestedRequire.html" />
+    <Content Include="Public\components\requirejs\tests\one.js" />
+    <Content Include="Public\components\requirejs\tests\onResourceLoad\a.js" />
+    <Content Include="Public\components\requirejs\tests\onResourceLoad\b.js" />
+    <Content Include="Public\components\requirejs\tests\onResourceLoad\nestedRequire-tests.js" />
+    <Content Include="Public\components\requirejs\tests\onResourceLoad\nestedRequire.html" />
+    <Content Include="Public\components\requirejs\tests\packages\bar\0.4\scripts\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\baz\lib\helper.js" />
+    <Content Include="Public\components\requirejs\tests\packages\baz\lib\index.js" />
+    <Content Include="Public\components\requirejs\tests\packages\dojox\door.js" />
+    <Content Include="Public\components\requirejs\tests\packages\dojox\window\pane.js" />
+    <Content Include="Public\components\requirejs\tests\packages\dojox\window\window.js" />
+    <Content Include="Public\components\requirejs\tests\packages\foo\lib\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\foo\lib\second.js" />
+    <Content Include="Public\components\requirejs\tests\packages\funky\index.js" />
+    <Content Include="Public\components\requirejs\tests\packages\funky\lib\monkey.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\build.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\optimizing-built.html" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\optimizing.html" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\packages\engine\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\packages\engine\pistons.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\packages\engine\sparkplugs.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\packages\fuel\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\optimizing\packages\tires\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\packages-tests.js" />
+    <Content Include="Public\components\requirejs\tests\packages\packages.html" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\alpha\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\alpha\replace.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\beta\0.2\scripts\beta.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\beta\0.2\scripts\util.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\dojox\chair\legs.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\dojox\chair\main.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\dojox\table\legs.js" />
+    <Content Include="Public\components\requirejs\tests\packages\pkgs\dojox\table\table.js" />
+    <Content Include="Public\components\requirejs\tests\packages\replace.js" />
+    <Content Include="Public\components\requirejs\tests\pathArray\pathArray.html" />
+    <Content Include="Public\components\requirejs\tests\pathArray\pathArrayFail.html" />
+    <Content Include="Public\components\requirejs\tests\pathArray\real.js" />
+    <Content Include="Public\components\requirejs\tests\paths\first.js\first.js" />
+    <Content Include="Public\components\requirejs\tests\paths\first.js\second.js" />
+    <Content Include="Public\components\requirejs\tests\paths\impl\array.js" />
+    <Content Include="Public\components\requirejs\tests\paths\impl\util.js" />
+    <Content Include="Public\components\requirejs\tests\paths\paths.html" />
+    <Content Include="Public\components\requirejs\tests\paths\relativeModuleId-tests.js" />
+    <Content Include="Public\components\requirejs\tests\paths\relativeModuleId.html" />
+    <Content Include="Public\components\requirejs\tests\paths\relativeNormalize\bar\baz.js" />
+    <Content Include="Public\components\requirejs\tests\paths\relativeNormalize\foo2.js" />
+    <Content Include="Public\components\requirejs\tests\paths\relativeNormalize\relativeNormalize-tests.js" />
+    <Content Include="Public\components\requirejs\tests\paths\relativeNormalize\relativeNormalize.html" />
+    <Content Include="Public\components\requirejs\tests\paths\util.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\a.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\b.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\c.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\delegated\delegated-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\delegated\delegated.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\delegated\delegated.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\double.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\double.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\earth.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextEvalError\fromTextEvalError-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextEvalError\fromTextEvalError.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextNoDefine\fromTextNoDefine-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextNoDefine\fromTextNoDefine.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextNoDefine\refine.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\fromText-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\fromText.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\fromTextConfig-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\fromTextConfig.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\refine.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\index.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\indexBuilder.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\nameOnly-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\nameOnly.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\nameOnly.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\onerror\onerror-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\onerror\onerror.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\onerror\thrower.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\app.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\bigCollection.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\bigCollection.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\collection.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\collectionHelper.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\common.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\component.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\component.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\main.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\pluginLast.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\specificCollection.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginLast\specificCollection.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMapSameName\pluginMapSameName-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMapSameName\pluginMapSameName.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMapSameName\plugin\plugin.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\dynamic\application.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\dynamic\employee.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\dynamic\main.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\dynamic\person.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\dynamic\plugin.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\dynamic\pluginMapDynamic.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\pluginMap-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginMap\pluginMap.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginShim\legacy.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginShim\pluginShim-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginShim\pluginShim.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\prime\a.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\prime\b.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\prime\c.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\prime\earth.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\sync-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\sync.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\textDepend\test.txt" />
+    <Content Include="Public\components\requirejs\tests\plugins\textDepend\textDepend-tests.js" />
+    <Content Include="Public\components\requirejs\tests\plugins\textDepend\textDepend.html" />
+    <Content Include="Public\components\requirejs\tests\plugins\textDepend\textDepend.js" />
+    <Content Include="Public\components\requirejs\tests\queryPath.html" />
+    <Content Include="Public\components\requirejs\tests\relative\foo\bar.js" />
+    <Content Include="Public\components\requirejs\tests\relative\foo\bar\message.txt" />
+    <Content Include="Public\components\requirejs\tests\relative\foo\bar\one.js" />
+    <Content Include="Public\components\requirejs\tests\relative\foo\bar\two.js" />
+    <Content Include="Public\components\requirejs\tests\relative\foo\three.js" />
+    <Content Include="Public\components\requirejs\tests\relative\greek\alpha.js" />
+    <Content Include="Public\components\requirejs\tests\relative\greek\main.js" />
+    <Content Include="Public\components\requirejs\tests\relative\outsideBaseUrl\2.js" />
+    <Content Include="Public\components\requirejs\tests\relative\outsideBaseUrl\a\outsideBaseUrl.html" />
+    <Content Include="Public\components\requirejs\tests\relative\outsideBaseUrl\b\1.js" />
+    <Content Include="Public\components\requirejs\tests\relative\outsideBaseUrl\b\3.js" />
+    <Content Include="Public\components\requirejs\tests\relative\relative-tests.js" />
+    <Content Include="Public\components\requirejs\tests\relative\relative.html" />
+    <Content Include="Public\components\requirejs\tests\relative\relativeBaseUrl-tests.js" />
+    <Content Include="Public\components\requirejs\tests\relative\relativeBaseUrl.html" />
+    <Content Include="Public\components\requirejs\tests\relative\top.js" />
+    <Content Include="Public\components\requirejs\tests\remoteUrls\jqwrap.js" />
+    <Content Include="Public\components\requirejs\tests\remoteUrls\remoteUrls-tests.js" />
+    <Content Include="Public\components\requirejs\tests\remoteUrls\remoteUrls.html" />
+    <Content Include="Public\components\requirejs\tests\requireAsync\requireAsync-tests.js" />
+    <Content Include="Public\components\requirejs\tests\requireAsync\requireAsync.html" />
+    <Content Include="Public\components\requirejs\tests\requirePluginLoad\requirePluginLoad-tests.js" />
+    <Content Include="Public\components\requirejs\tests\requirePluginLoad\requirePluginLoad.html" />
+    <Content Include="Public\components\requirejs\tests\shim\a.js" />
+    <Content Include="Public\components\requirejs\tests\shim\b.js" />
+    <Content Include="Public\components\requirejs\tests\shim\basic-tests.js" />
+    <Content Include="Public\components\requirejs\tests\shim\basic.html" />
+    <Content Include="Public\components\requirejs\tests\shim\built\basic-built.html" />
+    <Content Include="Public\components\requirejs\tests\shim\built\basic-tests.js" />
+    <Content Include="Public\components\requirejs\tests\shim\c.js" />
+    <Content Include="Public\components\requirejs\tests\shim\d.js" />
+    <Content Include="Public\components\requirejs\tests\shim\e.js" />
+    <Content Include="Public\components\requirejs\tests\shim\f.js" />
+    <Content Include="Public\components\requirejs\tests\simple-badbase.html" />
+    <Content Include="Public\components\requirejs\tests\simple-nohead.html" />
+    <Content Include="Public\components\requirejs\tests\simple-tests.js" />
+    <Content Include="Public\components\requirejs\tests\simple.html" />
+    <Content Include="Public\components\requirejs\tests\simple.js" />
+    <Content Include="Public\components\requirejs\tests\specialDeps\foo.js" />
+    <Content Include="Public\components\requirejs\tests\specialDeps\specialDeps-tests.js" />
+    <Content Include="Public\components\requirejs\tests\specialDeps\specialDeps.html" />
+    <Content Include="Public\components\requirejs\tests\text\local.js" />
+    <Content Include="Public\components\requirejs\tests\text\plain.txt" />
+    <Content Include="Public\components\requirejs\tests\text\resources\local.html" />
+    <Content Include="Public\components\requirejs\tests\text\resources\sample.html" />
+    <Content Include="Public\components\requirejs\tests\text\separate.js" />
+    <Content Include="Public\components\requirejs\tests\text\subwidget.html" />
+    <Content Include="Public\components\requirejs\tests\text\subwidget.js" />
+    <Content Include="Public\components\requirejs\tests\text\subwidget2.html" />
+    <Content Include="Public\components\requirejs\tests\text\text.html" />
+    <Content Include="Public\components\requirejs\tests\text\textBuilt.html" />
+    <Content Include="Public\components\requirejs\tests\text\textBuilt.js" />
+    <Content Include="Public\components\requirejs\tests\text\textOnError.html" />
+    <Content Include="Public\components\requirejs\tests\text\textOnly.html" />
+    <Content Include="Public\components\requirejs\tests\text\textOnXhr.html" />
+    <Content Include="Public\components\requirejs\tests\text\widget.html" />
+    <Content Include="Public\components\requirejs\tests\text\widget.js" />
+    <Content Include="Public\components\requirejs\tests\toUrl\.hidden.html" />
+    <Content Include="Public\components\requirejs\tests\toUrl\auxil.html" />
+    <Content Include="Public\components\requirejs\tests\toUrl\main.html" />
+    <Content Include="Public\components\requirejs\tests\toUrl\main.js" />
+    <Content Include="Public\components\requirejs\tests\toUrl\sub\nested\thing.js" />
+    <Content Include="Public\components\requirejs\tests\toUrl\sub\util.html" />
+    <Content Include="Public\components\requirejs\tests\toUrl\sub\util.js" />
+    <Content Include="Public\components\requirejs\tests\toUrl\toUrl-tests.js" />
+    <Content Include="Public\components\requirejs\tests\toUrl\toUrl.html" />
+    <Content Include="Public\components\requirejs\tests\trailingComma\a.js" />
+    <Content Include="Public\components\requirejs\tests\trailingComma\trailingComma.html" />
+    <Content Include="Public\components\requirejs\tests\trailingComma\trailingComma.js" />
+    <Content Include="Public\components\requirejs\tests\tres.js" />
+    <Content Include="Public\components\requirejs\tests\two.js" />
+    <Content Include="Public\components\requirejs\tests\undef\globalFoo.js" />
+    <Content Include="Public\components\requirejs\tests\undef\real.js" />
+    <Content Include="Public\components\requirejs\tests\undef\undef.html" />
+    <Content Include="Public\components\requirejs\tests\undef\undefEnforceShim.html" />
+    <Content Include="Public\components\requirejs\tests\undef\undefLocal.html" />
+    <Content Include="Public\components\requirejs\tests\undef\undefNoRequire.html" />
+    <Content Include="Public\components\requirejs\tests\uniques\one.js" />
+    <Content Include="Public\components\requirejs\tests\uniques\three.js" />
+    <Content Include="Public\components\requirejs\tests\uniques\two.js" />
+    <Content Include="Public\components\requirejs\tests\uniques\uniques.html" />
+    <Content Include="Public\components\requirejs\tests\universal\eye.js" />
+    <Content Include="Public\components\requirejs\tests\universal\newt.js" />
+    <Content Include="Public\components\requirejs\tests\universal\spell.js" />
+    <Content Include="Public\components\requirejs\tests\universal\tail.js" />
+    <Content Include="Public\components\requirejs\tests\universal\universal-built.html" />
+    <Content Include="Public\components\requirejs\tests\universal\universal-tests-built-expected.js" />
+    <Content Include="Public\components\requirejs\tests\universal\universal-tests-built.js" />
+    <Content Include="Public\components\requirejs\tests\universal\universal-tests.js" />
+    <Content Include="Public\components\requirejs\tests\universal\universal.html" />
+    <Content Include="Public\components\requirejs\tests\uno.js" />
+    <Content Include="Public\components\requirejs\tests\urlArgsToUrl.html" />
+    <Content Include="Public\components\requirejs\tests\urlfetch\one.js" />
+    <Content Include="Public\components\requirejs\tests\urlfetch\three.js" />
+    <Content Include="Public\components\requirejs\tests\urlfetch\two.js" />
+    <Content Include="Public\components\requirejs\tests\urlfetch\urlfetch.html" />
+    <Content Include="Public\components\requirejs\tests\version1\alpha.js" />
+    <Content Include="Public\components\requirejs\tests\version1\beta.js" />
+    <Content Include="Public\components\requirejs\tests\version1\gamma.js" />
+    <Content Include="Public\components\requirejs\tests\version1\omega.js" />
+    <Content Include="Public\components\requirejs\tests\version2\alpha.js" />
+    <Content Include="Public\components\requirejs\tests\version2\beta.js" />
+    <Content Include="Public\components\requirejs\tests\version2\epsilon.js" />
+    <Content Include="Public\components\requirejs\tests\version2\omega.js" />
+    <Content Include="Public\components\requirejs\tests\workers.html" />
+    <Content Include="Public\components\requirejs\tests\workers.js" />
+    <Content Include="Public\components\underscore\.gitignore" />
+    <Content Include="Public\components\underscore\docs\docco.css" />
+    <Content Include="Public\components\underscore\docs\favicon.ico" />
+    <Content Include="Public\components\underscore\docs\images\background.png" />
+    <Content Include="Public\components\underscore\docs\images\underscore.png" />
+    <Content Include="Public\components\underscore\docs\underscore.html" />
+    <Content Include="Public\components\underscore\favicon.ico" />
+    <Content Include="Public\components\underscore\index.html" />
+    <Content Include="Public\components\underscore\index.js" />
+    <Content Include="Public\components\underscore\test\arrays.js" />
+    <Content Include="Public\components\underscore\test\chaining.js" />
+    <Content Include="Public\components\underscore\test\collections.js" />
+    <Content Include="Public\components\underscore\test\functions.js" />
+    <Content Include="Public\components\underscore\test\index.html" />
+    <Content Include="Public\components\underscore\test\objects.js" />
+    <Content Include="Public\components\underscore\test\speed.js" />
+    <Content Include="Public\components\underscore\test\utility.js" />
+    <Content Include="Public\components\underscore\test\vendor\jquery.js" />
+    <Content Include="Public\components\underscore\test\vendor\jslitmus.js" />
+    <Content Include="Public\components\underscore\test\vendor\qunit.css" />
+    <Content Include="Public\components\underscore\test\vendor\qunit.js" />
+    <Content Include="Public\components\underscore\test\vendor\runner.js" />
+    <Content Include="Public\components\underscore\underscore-min.js" />
+    <Content Include="Public\components\underscore\underscore.js" />
+    <Content Include="Public\css\style.css" />
+    <Content Include="Public\js\apps\blog\app.js" />
+    <Content Include="Public\js\apps\blog\views\MainView.js" />
+    <Content Include="Public\js\apps\dashboard\app.js" />
+    <Content Include="Public\js\apps\dashboard\views\MainView.js" />
+    <Content Include="Public\js\apps\home\app.js" />
+    <Content Include="Public\js\apps\home\templates\FooterView.html" />
+    <Content Include="Public\js\apps\home\templates\HeaderView.html" />
+    <Content Include="Public\js\apps\home\views\FooterView.js" />
+    <Content Include="Public\js\apps\home\views\HeaderView.js" />
+    <Content Include="Public\js\apps\home\views\MainView.js" />
+    <Content Include="Public\js\core\client.js" />
+    <Content Include="Public\js\core\router.js" />
+    <Content Include="Public\js\core\viewManager.js" />
+    <Content Include="Public\js\main.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Public\components\backbone\.npmignore" />
+    <Content Include="Public\components\backbone\.travis.yml" />
+    <Content Include="Public\components\backbone\backbone-min.map" />
+    <Content Include="Public\components\backbone\CNAME" />
+    <Content Include="Public\components\backbone\component.json" />
+    <Content Include="Public\components\backbone\CONTRIBUTING.md" />
+    <Content Include="Public\components\backbone\docs\jsl.conf" />
+    <Content Include="Public\components\backbone\docs\public\fonts\aller-bold.eot" />
+    <Content Include="Public\components\backbone\docs\public\fonts\aller-bold.ttf" />
+    <Content Include="Public\components\backbone\docs\public\fonts\aller-bold.woff" />
+    <Content Include="Public\components\backbone\docs\public\fonts\aller-light.eot" />
+    <Content Include="Public\components\backbone\docs\public\fonts\aller-light.ttf" />
+    <Content Include="Public\components\backbone\docs\public\fonts\aller-light.woff" />
+    <Content Include="Public\components\backbone\docs\public\fonts\fleurons.eot" />
+    <Content Include="Public\components\backbone\docs\public\fonts\fleurons.ttf" />
+    <Content Include="Public\components\backbone\docs\public\fonts\fleurons.woff" />
+    <Content Include="Public\components\backbone\docs\public\fonts\novecento-bold.eot" />
+    <Content Include="Public\components\backbone\docs\public\fonts\novecento-bold.ttf" />
+    <Content Include="Public\components\backbone\docs\public\fonts\novecento-bold.woff" />
+    <Content Include="Public\components\backbone\LICENSE" />
+    <Content Include="Public\components\backbone\package.json" />
+    <Content Include="Public\components\backbone\Rakefile" />
+    <Content Include="Public\components\backbone\README.md" />
+    <Content Include="Public\components\backbone\test\model.coffee" />
+    <Content Include="Public\components\bootstrap\.travis.yml" />
+    <Content Include="Public\components\bootstrap\CHANGELOG.md" />
+    <Content Include="Public\components\bootstrap\component.json" />
+    <Content Include="Public\components\bootstrap\composer.json" />
+    <Content Include="Public\components\bootstrap\CONTRIBUTING.md" />
+    <Content Include="Public\components\bootstrap\docs\assets\js\README.md" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\.bin\hulk" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\.git_ignore" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\bin\hulk" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\LICENSE" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\Makefile" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\package.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\README.md" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\Changes" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\Rakefile" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\README.md" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\comments.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\comments.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\delimiters.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\delimiters.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\interpolation.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\interpolation.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\inverted.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\inverted.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\partials.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\partials.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\sections.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\sections.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\~lambdas.json" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\specs\~lambdas.yml" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\spec\TESTING.md" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\test\templates\list.mustache" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\web\index.html.mustache" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\wrappers\amd.js.mustache" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\wrappers\common.js.mustache" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\wrappers\js.mustache" />
+    <Content Include="Public\components\bootstrap\docs\build\node_modules\hogan.js\wrappers\mustache.js.mustache" />
+    <Content Include="Public\components\bootstrap\docs\build\package.json" />
+    <Content Include="Public\components\bootstrap\docs\templates\layout.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\base-css.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\components.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\customize.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\extend.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\getting-started.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\index.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\javascript.mustache" />
+    <Content Include="Public\components\bootstrap\docs\templates\pages\scaffolding.mustache" />
+    <Content Include="Public\components\bootstrap\js\.jshintrc" />
+    <Content Include="Public\components\bootstrap\less\accordion.less" />
+    <Content Include="Public\components\bootstrap\less\alerts.less" />
+    <Content Include="Public\components\bootstrap\less\bootstrap.less" />
+    <Content Include="Public\components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Public\components\bootstrap\less\button-groups.less" />
+    <Content Include="Public\components\bootstrap\less\buttons.less" />
+    <Content Include="Public\components\bootstrap\less\carousel.less" />
+    <Content Include="Public\components\bootstrap\less\close.less" />
+    <Content Include="Public\components\bootstrap\less\code.less" />
+    <Content Include="Public\components\bootstrap\less\component-animations.less" />
+    <Content Include="Public\components\bootstrap\less\dropdowns.less" />
+    <Content Include="Public\components\bootstrap\less\forms.less" />
+    <Content Include="Public\components\bootstrap\less\grid.less" />
+    <Content Include="Public\components\bootstrap\less\hero-unit.less" />
+    <Content Include="Public\components\bootstrap\less\labels-badges.less" />
+    <Content Include="Public\components\bootstrap\less\layouts.less" />
+    <Content Include="Public\components\bootstrap\less\media.less" />
+    <Content Include="Public\components\bootstrap\less\mixins.less" />
+    <Content Include="Public\components\bootstrap\less\modals.less" />
+    <Content Include="Public\components\bootstrap\less\navbar.less" />
+    <Content Include="Public\components\bootstrap\less\navs.less" />
+    <Content Include="Public\components\bootstrap\less\pager.less" />
+    <Content Include="Public\components\bootstrap\less\pagination.less" />
+    <Content Include="Public\components\bootstrap\less\popovers.less" />
+    <Content Include="Public\components\bootstrap\less\progress-bars.less" />
+    <Content Include="Public\components\bootstrap\less\reset.less" />
+    <Content Include="Public\components\bootstrap\less\responsive-1200px-min.less" />
+    <Content Include="Public\components\bootstrap\less\responsive-767px-max.less" />
+    <Content Include="Public\components\bootstrap\less\responsive-768px-979px.less" />
+    <Content Include="Public\components\bootstrap\less\responsive-navbar.less" />
+    <Content Include="Public\components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Public\components\bootstrap\less\responsive.less" />
+    <Content Include="Public\components\bootstrap\less\scaffolding.less" />
+    <Content Include="Public\components\bootstrap\less\sprites.less" />
+    <Content Include="Public\components\bootstrap\less\tables.less" />
+    <Content Include="Public\components\bootstrap\less\thumbnails.less" />
+    <Content Include="Public\components\bootstrap\less\tooltip.less" />
+    <Content Include="Public\components\bootstrap\less\type.less" />
+    <Content Include="Public\components\bootstrap\less\utilities.less" />
+    <Content Include="Public\components\bootstrap\less\variables.less" />
+    <Content Include="Public\components\bootstrap\less\wells.less" />
+    <Content Include="Public\components\bootstrap\LICENSE" />
+    <Content Include="Public\components\bootstrap\Makefile" />
+    <Content Include="Public\components\bootstrap\package.json" />
+    <Content Include="Public\components\bootstrap\README.md" />
+    <Content Include="Public\components\jquery\bower.json" />
+    <Content Include="Public\components\jquery\component.json" />
+    <Content Include="Public\components\jquery\composer.json" />
+    <Content Include="Public\components\jquery\package.json" />
+    <Content Include="Public\components\jquery\README.md" />
+    <Content Include="Public\components\require-handlebars-plugin\build.sh" />
+    <Content Include="Public\components\require-handlebars-plugin\component.json" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\template\coolPartial.hbs" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\template\i18n\en_ca.json" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\template\i18n\en_us.json" />
+    <Content Include="Public\components\require-handlebars-plugin\demo\template\one.hbs" />
+    <Content Include="Public\components\require-handlebars-plugin\package.json" />
+    <Content Include="Public\components\require-handlebars-plugin\README.md" />
+    <Content Include="Public\components\requirejs\component.json" />
+    <Content Include="Public\components\requirejs\dist\dist-build.sh" />
+    <Content Include="Public\components\requirejs\dist\fonts\Inconsolata.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Bold.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Bold_Italic.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Caption.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Caption_Bold.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Italic.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Narrow.ttf" />
+    <Content Include="Public\components\requirejs\dist\fonts\PT-Sans\PT_Sans_Narrow_Bold.ttf" />
+    <Content Include="Public\components\requirejs\dist\Markdown-License.text" />
+    <Content Include="Public\components\requirejs\dist\Markdown.pl" />
+    <Content Include="Public\components\requirejs\dist\README.md" />
+    <Content Include="Public\components\requirejs\docs\design\packages.md" />
+    <Content Include="Public\components\requirejs\LICENSE" />
+    <Content Include="Public\components\requirejs\package.json" />
+    <Content Include="Public\components\requirejs\README.md" />
+    <Content Include="Public\components\requirejs\tests\allj.sh" />
+    <Content Include="Public\components\requirejs\tests\alln.sh" />
+    <Content Include="Public\components\requirejs\tests\bar" />
+    <Content Include="Public\components\requirejs\tests\browsertests\appendbeforeload\one.dphpd" />
+    <Content Include="Public\components\requirejs\tests\browsertests\async\async.php" />
+    <Content Include="Public\components\requirejs\tests\browsertests\async\one.php" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\four.php" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractiveattach\six.php" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\four.php" />
+    <Content Include="Public\components\requirejs\tests\browsertests\scriptloadinteractive\six.php" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\a.refine" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\b.refine" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\c.refine" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\d.refine" />
+    <Content Include="Public\components\requirejs\tests\circular\transpiler\e.refine" />
+    <Content Include="Public\components\requirejs\tests\doh\LICENSE" />
+    <Content Include="Public\components\requirejs\tests\doh\README" />
+    <Content Include="Public\components\requirejs\tests\doh\runner.sh" />
+    <Content Include="Public\components\requirejs\tests\doh\_sounds\LICENSE" />
+    <Content Include="Public\components\requirejs\tests\foo" />
+    <Content Include="Public\components\requirejs\tests\layers\build.sh" />
+    <Content Include="Public\components\requirejs\tests\plugins\delegated\a.refine" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextEvalError\a.refine" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextEvalError\b.refine" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromTextNoDefine\a.refine" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\a.refine" />
+    <Content Include="Public\components\requirejs\tests\plugins\fromText\b.refine" />
+    <Content Include="Public\components\requirejs\tests\plugins\pluginShim\a.refine" />
+    <Content Include="Public\components\requirejs\tests\README.md" />
+    <Content Include="Public\components\requirejs\tests\toUrl\sub\noext" />
+    <Content Include="Public\components\requirejs\updatesubs.sh" />
+    <Content Include="Public\components\underscore\.npmignore" />
+    <Content Include="Public\components\underscore\.travis.yml" />
+    <Content Include="Public\components\underscore\CNAME" />
+    <Content Include="Public\components\underscore\component.json" />
+    <Content Include="Public\components\underscore\CONTRIBUTING.md" />
+    <Content Include="Public\components\underscore\LICENSE" />
+    <Content Include="Public\components\underscore\package.json" />
+    <Content Include="Public\components\underscore\Rakefile" />
+    <Content Include="Public\components\underscore\README.md" />
+    <Content Include="Public\js\apps\blog\models\.keepme" />
+    <Content Include="Public\js\apps\blog\templates\.keepme" />
+    <Content Include="Public\js\apps\dashboard\models\.keepme" />
+    <Content Include="Public\js\apps\dashboard\templates\.keepme" />
+    <Content Include="Public\js\apps\home\models\.keepme" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49896</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49835/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
